@@ -73,8 +73,8 @@ class AuthenticationController extends Controller
     // Handle user login
     public function login(Request $request)
     {
-        // Validate the request data
         try {
+            // Validate the request data
             $request->validate([
                 'email' => 'required|string|email',
                 'password' => 'required|string',
