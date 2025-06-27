@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('genres', function (Blueprint $table) {
-            $table->unsignedSmallInteger('role_id')->primary(); 
+            $table->smallIncrements('genre_id'); 
             $table->string('name');
         });
     }
