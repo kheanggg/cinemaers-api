@@ -25,6 +25,8 @@ class User extends Authenticatable
         'role_id',
     ];
 
+    protected $primaryKey = 'user_id';
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -50,6 +52,6 @@ class User extends Authenticatable
 
     public function role()
     {
-        return $this->belongTo(Role::class, 'role_id', 'role_id');
+        return $this->belongsTo(Role::class, 'role_id', 'role_id');
     }
 }
